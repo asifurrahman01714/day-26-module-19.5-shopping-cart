@@ -39,12 +39,12 @@ function priceAmount(id, price) {
     document.getElementById(id).innerText = totalFirstPrice;
 }
 
-function plusSubTotal( price) {
+function plusSubTotal(price) {
     const subTotal = parseFloat(document.getElementById('subTotal').innerText);
     const totalSubTotal = subTotal + price;
     document.getElementById('subTotal').innerText = totalSubTotal;
     return totalSubTotal;
-    
+
 }
 
 function plusTotal(price) {
@@ -60,7 +60,7 @@ minusBtn.addEventListener('click', function () {
     //capturing first input number
     minusInput('firstInput');
     //capturing price amount
-    minusFirstPrice('firstPrice',1219);
+    minusFirstPrice('firstPrice', 1219);
     //capturing subtotal
     minusSubTotal(1219);
     //capturing total amount
@@ -73,7 +73,7 @@ caseMinusBtn.addEventListener('click', function () {
     //capturing first input number
     minusInput('caseInput');
     //capturing price amount
-    minusFirstPrice('caseFirstPrice',59);
+    minusFirstPrice('caseFirstPrice', 59);
     //capturing subtotal
     minusSubTotal(59);
 
@@ -84,15 +84,19 @@ caseMinusBtn.addEventListener('click', function () {
 
 function minusInput(id) {
     const firstInput = parseFloat(document.getElementById(id).value);
-    const totalFirstInputNumber = firstInput - 1;
-    document.getElementById(id).value = totalFirstInputNumber;
+    if (1 <= firstInput) {
+        const totalFirstInputNumber = firstInput - 1;
+        document.getElementById(id).value = totalFirstInputNumber;
+    }
 
 }
 
 function minusFirstPrice(id, price) {
     const firstPrice = parseFloat(document.getElementById(id).innerText);
-    const totalFirstPrice = firstPrice - price;
-    document.getElementById(id).innerText = totalFirstPrice;
+    if (1219 <= firstPrice) {
+        const totalFirstPrice = firstPrice - price;
+        document.getElementById(id).innerText = totalFirstPrice;
+    }
 }
 
 function minusSubTotal(price) {
