@@ -1,15 +1,23 @@
-const casePlusBtn = document.getElementById('casePlusBtn');
-casePlusBtn.addEventListener('click',function () {
-    productHandle(true);
+function phoneHandle(isIncrease) {
+    const phoneInput = document.getElementById('phoneInput');
+    const phoneNewInput = parseInt(phoneInput.value);
+    let phoneLastInput = phoneNewInput;
+    if (isIncrease == true) {
+        phoneLastInput = phoneNewInput + 1;
+    }
 
-})
+    if (isIncrease == false && phoneNewInput > 0) {
+        phoneLastInput = phoneNewInput - 1;
+    }
+    phoneInput.value = phoneLastInput;
+    const phoneNewPrice = phoneLastInput * 1219;
+    document.getElementById('phoneFirstPrice').innerText = phoneNewPrice;
+}
 
-const caseMinusBtn = document.getElementById('caseMinusBtn');
-caseMinusBtn.addEventListener('click', function () {
-    productHandle(false);
-});
 
-function productHandle(isIncrease) {
+
+//case handle
+function caseHandle(isIncrease) {
     const caseInput = document.getElementById('caseInput');
     const caseNewInput = parseInt(caseInput.value);
     let caseLastInput = caseNewInput;

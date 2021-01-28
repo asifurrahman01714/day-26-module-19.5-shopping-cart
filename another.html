@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i id="minusBtn" class="fas fa-minus"></i></button>
-                           <input id="firstInput" type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i id="plusBtn" class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i onclick="phoneHandle(false)" class="fas fa-minus"></i></button>
+                           <input id="phoneInput" type="text" class="form-control text-center" value="1">
+                           <button class="btn btn-default"><i onclick="phoneHandle(true)" class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="firstPrice">1219</span></h5>
+                        <h5>$ <span id="phoneFirstPrice">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,9 +43,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i id="caseMinusBtn" class="fas fa-minus"></i></button>
+                           <button class="btn btn-default"><i onclick="caseHandle(false)" class="fas fa-minus"></i></button>
                            <input id="caseInput" type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i id="casePlusBtn" class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i onclick="caseHandle(true)" class="fas fa-plus"></i></button>
 
                         </div>
                         <h5>$ <span id="caseFirstPrice">59</span></h5>
@@ -111,6 +111,10 @@
       myModal.addEventListener('shown.bs.modal', function () {
          myInput.focus()
       })
+   </script>
+
+   <script>
+      
    </script>
 </body>
 
